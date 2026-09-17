@@ -309,3 +309,40 @@
     height: 45px;
   }
 }
+
+.seo-toggle {
+  display: none;
+}
+
+.seo-more {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.seo-toggle-label {
+  display: inline-block;
+  margin-top: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.see-less {
+  display: none;
+}
+
+/* When checked */
+.seo-toggle:checked ~ .seo-more {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.seo-toggle:checked ~ .seo-toggle-label .see-more {
+  display: none;
+}
+
+.seo-toggle:checked ~ .seo-toggle-label .see-less {
+  display: inline;
+}
